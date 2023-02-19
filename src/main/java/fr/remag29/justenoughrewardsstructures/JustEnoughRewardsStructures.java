@@ -1,6 +1,9 @@
 package fr.remag29.justenoughrewardsstructures;
 
 import com.mojang.logging.LogUtils;
+import fr.remag29.justenoughrewardsstructures.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -21,6 +24,8 @@ public class JustEnoughRewardsStructures {
     public JustEnoughRewardsStructures() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -32,8 +37,14 @@ public class JustEnoughRewardsStructures {
 
     }
 
-    // Onglet créatif du mod
+    // Add items to creative tab
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
+        if (event.getTab() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.TREASURE_COIN);
+        }
+        if (event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.COIN_PURSE);
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
