@@ -40,7 +40,7 @@ public class JustEnoughRewardsStructures {
     // Add items to creative tab
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.TREASURE_COIN);
+            event.accept(ModItems.TREASURE_COINS);
         }
         if (event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES){
             event.accept(ModItems.COIN_PURSE);

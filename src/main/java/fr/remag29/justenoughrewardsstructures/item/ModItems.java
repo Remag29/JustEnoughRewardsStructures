@@ -11,7 +11,7 @@ public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, JustEnoughRewardsStructures.MOD_ID);
 
-    public static final RegistryObject<Item> TREASURE_COIN = ITEMS.register("treasure_coin", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TREASURE_COINS = ITEMS.register("treasure_coins", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COIN_PURSE = ITEMS.register("coin_purse", () -> new Item(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
