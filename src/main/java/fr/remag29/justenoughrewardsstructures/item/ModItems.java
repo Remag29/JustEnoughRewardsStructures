@@ -16,6 +16,7 @@ public class ModItems {
     public static final RegistryObject<Item> ANCIENT_EMERALD = ITEMS.register("ancient_emerald", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ANCIENT_RUBY = ITEMS.register("ancient_ruby", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ARGON_CRYSTAL = ITEMS.register("argon_crystal", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SATANIC_GRIMOIRE = ITEMS.register("satanic_grimoire", () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
