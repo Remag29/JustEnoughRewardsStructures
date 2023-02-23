@@ -19,6 +19,8 @@ public class ModItems {
     public static final RegistryObject<Item> SATANIC_GRIMOIRE = ITEMS.register("satanic_grimoire", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SUSPICIOUS_RUM = ITEMS.register("suspicious_rum", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TRIBAL_NECKLACE = ITEMS.register("tribal_necklace", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> THE_GRAAL = ITEMS.register("the_graal", () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
