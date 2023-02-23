@@ -41,6 +41,12 @@ public class JustEnoughRewardsStructures {
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.TREASURE_COINS);
+            event.accept(ModItems.ANCIENT_EMERALD);
+            event.accept(ModItems.ANCIENT_RUBY);
+            event.accept(ModItems.ARGON_CRYSTAL);
+            event.accept(ModItems.SATANIC_GRIMOIRE);
+            event.accept(ModItems.SUSPICIOUS_RUM);
+            event.accept(ModItems.TRIBAL_NECKLACE);
         }
         if (event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES){
             event.accept(ModItems.COIN_PURSE);
